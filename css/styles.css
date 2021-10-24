@@ -1,19 +1,61 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
-/* Navigation */
-nav ul {
-  padding: 0px;
-}
-nav li {
-  display: inline-block;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&display=swap");
+
+/* Header */
+
+.gamehub_logo {
+  width: 125px;
+  height: 100%;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+}
+
+.profile {
+  font-size: 50px;
+  color: #053eb8;
+}
+
+/* Navigation */
+.nav_links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+li,
+a {
+  font-family: "Nunito", "sans-serif";
+  font-weight: bolder;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.nav_links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+  color: #7ab7fc;
+}
+
+/* Search Box */
 
 .container .input {
   border: 0;
@@ -23,13 +65,13 @@ nav li {
 
 .search_box_wrapper {
   width: 500px;
-  margin: 38px auto;
+  margin: 36px auto;
 }
 
 .search_box_wrapper .search_box {
   position: relative;
   width: 500px;
-  height: 60px;
+  height: 42px;
 }
 
 .search_box_wrapper .search_box .input {
@@ -41,15 +83,15 @@ nav li {
   height: 100%;
   padding: 10px 20px;
   border-radius: 3px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .search_box_wrapper .search_box .search_box_button {
   position: absolute;
   top: 0;
   right: 0;
-  width: 60px;
-  height: 100%;
+  width: 32px;
+  height: 32px;
   background: #057ae8;
   z-index: 1;
   cursor: pointer;
@@ -65,27 +107,77 @@ nav li {
   left: 50%;
   transform: translate(-50%, -50%);
   color: rgb(0, 0, 0);
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .search_box_wrapper .search_box .input {
   padding-right: 80px;
-}
-
-.search_box_wrapper .search_box .input {
   border-radius: 50px;
 }
 
 .search_box_wrapper .search_box .search_box_button {
-  right: 0px;
+  right: 4px;
+  top: 5px;
   border-radius: 50%;
 }
 
 /* Weekend Sale */
+
+.weekend_sale .weekend_sale_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 .weekend_sale {
   background-image: url("../images/jeshoots-com-eCktzGjC-iU-unsplash\ \(1\).jpg");
-  min-height: 60vh;
+  min-height: 180px;
   background-size: cover;
   background-position-x: center;
   background-position-y: center;
+  position: relative;
+}
+
+h1 {
+  font-family: Nunito;
+  font-size: 36px;
+  font-weight: bolder;
+  padding: 20px;
+  color: rgb(255, 255, 255);
+  opacity: 1;
+}
+
+h2 {
+  font-family: Nunito;
+  font-size: 30px;
+  font-weight: bolder;
+  color: #053eb8;
+}
+
+/* Body */
+
+.top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 50px, auto;
+  grid-gap: 10px;
+  padding: 50px;
+}
+
+.top h3 {
+  grid-column: -1/1;
+  font-family: Nunito;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+.top img {
+  width: 100%;
+}
+
+.games {
+  display: grid;
+  grid-template-columns: 1fr;
 }
