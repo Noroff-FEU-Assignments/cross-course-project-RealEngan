@@ -4,13 +4,15 @@
 /* Header */
 
 .gamehub_logo {
-  width: 125px;
+  width: 75px;
   height: 100%;
 }
 
 * {
   margin: 0;
   padding: 0;
+  list-style: none;
+  text-decoration: none;
   box-sizing: border-box;
 }
 
@@ -22,7 +24,7 @@ nav {
 }
 
 .profile {
-  font-size: 50px;
+  font-size: 35px;
   color: #053eb8;
 }
 
@@ -70,7 +72,7 @@ a {
 
 .search_box_wrapper .search_box {
   position: relative;
-  width: 500px;
+  width: 250px;
   height: 42px;
 }
 
@@ -160,8 +162,8 @@ h2 {
 
 .top {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin: 50px, auto;
+  grid-template-columns: 1fr;
+  margin: 20px, auto;
   grid-gap: 10px;
   padding: 50px;
 }
@@ -180,4 +182,85 @@ h2 {
 .games {
   display: grid;
   grid-template-columns: 1fr;
+}
+
+/*footer*/
+
+footer {
+  width: 100vw;
+  display: block;
+  overflow: hidden;
+  padding: 70px 0;
+  box-sizing: border-box;
+  background-color: #030303;
+}
+
+.footer_content {
+  display: block;
+  margin: 0 auto;
+  width: 1000px;
+  height: 100%;
+}
+
+.footer_content .footer_text {
+  width: calc(21.6% - 20px);
+  margin-right: 10px;
+  float: left;
+  height: 100%;
+}
+
+.footer_content .footer_text:last-child {
+  margin-right: 0;
+}
+
+.footer_content .footer_text h3 {
+  font-family: "Roboto";
+  font-size: 18px;
+  color: white;
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.footer_content .footer_text p {
+  font-family: "Roboto";
+  font-size: 12px;
+  color: white;
+  display: block;
+  font-weight: 100;
+  width: 100%;
+  padding-bottom: 5px;
+}
+
+@media (min-width: 375px) {
+  .top {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .top {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .search_box_wrapper .search_box {
+    width: 500px;
+    height: 42px;
+  }
+  .gamehub_logo {
+    width: 125px;
+    height: 100%;
+  }
+  .profile {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 375px) {
+  footer .footer_content {
+    width: 90%;
+  }
+  .footer_content .footer_text {
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }
