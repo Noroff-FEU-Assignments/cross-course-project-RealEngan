@@ -40,6 +40,17 @@ nav {
   padding: 0px 20px;
 }
 
+.contact_content {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+.contact_li {
+  display: inline-flex;
+  padding: 0px 20px;
+}
+
 li,
 a {
   font-family: "Nunito", "sans-serif";
@@ -135,7 +146,16 @@ a {
 
 .weekend_sale {
   background-image: url("../images/jeshoots-com-eCktzGjC-iU-unsplash\ \(1\).jpg");
-  min-height: 180px;
+  min-height: 200px;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  position: relative;
+}
+
+.contact_background {
+  background-image: url("../images/lumensoft-technologies-WaGMKmJ2F0Y-unsplash\ \(2\).jpg");
+  min-height: 200px;
   background-size: cover;
   background-position-x: center;
   background-position-y: center;
@@ -149,6 +169,18 @@ h1 {
   padding: 20px;
   color: rgb(255, 255, 255);
   opacity: 1;
+}
+
+.contact_h1 {
+  font-family: Nunito;
+  font-size: 30px;
+  font-weight: bolder;
+  padding: 20px;
+  color: black;
+}
+
+.contact_li {
+  padding: 20px;
 }
 
 h2 {
@@ -182,6 +214,7 @@ h2 {
 .games {
   display: grid;
   grid-template-columns: 1fr;
+  font-family: Roboto;
 }
 
 /*footer*/
@@ -205,6 +238,7 @@ footer {
 .footer_content .footer_text {
   width: calc(21.6% - 20px);
   margin-right: 10px;
+  padding: 10px;
   float: left;
   height: 100%;
 }
@@ -241,6 +275,9 @@ footer {
 @media (min-width: 768px) {
   .top {
     grid-template-columns: repeat(4, 1fr);
+  }
+  .top_two {
+    grid-template-columns: repeat(5, 1fr);
   }
   .search_box_wrapper .search_box {
     width: 500px;
