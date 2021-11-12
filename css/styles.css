@@ -39,18 +39,6 @@ nav {
   display: inline-block;
   padding: 0px 20px;
 }
-
-.contact_content {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-}
-.contact_li {
-  display: inline-flex;
-  padding: 0px 20px;
-}
-
 li,
 a {
   font-family: "Nunito", "sans-serif";
@@ -153,15 +141,6 @@ a {
   position: relative;
 }
 
-.contact_background {
-  background-image: url("../images/lumensoft-technologies-WaGMKmJ2F0Y-unsplash\ \(2\).jpg");
-  min-height: 200px;
-  background-size: cover;
-  background-position-x: center;
-  background-position-y: center;
-  position: relative;
-}
-
 h1 {
   font-family: Nunito;
   font-size: 36px;
@@ -169,18 +148,6 @@ h1 {
   padding: 20px;
   color: rgb(255, 255, 255);
   opacity: 1;
-}
-
-.contact_h1 {
-  font-family: Nunito;
-  font-size: 30px;
-  font-weight: bolder;
-  padding: 20px;
-  color: black;
-}
-
-.contact_li {
-  padding: 20px;
 }
 
 h2 {
@@ -299,5 +266,140 @@ footer {
   .footer_content .footer_text {
     width: 100%;
     margin-bottom: 30px;
+  }
+}
+
+/* Contact Page */
+
+.contact {
+  position: relative;
+  min-height: 100vh;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url(../images/contactbackground.png);
+  background-size: cover;
+}
+
+.contact .content {
+  max-width: 800px;
+  text-align: center;
+}
+
+.contact .content h2 {
+  font-size: 36px;
+  font-weight: 500;
+  color: white;
+  font-family: Nunito;
+}
+
+.contact .content p {
+  font-weight: 300;
+  color: white;
+  font-family: Roboto;
+}
+
+.contact_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.contact_container .contact_info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact_container .contact_info .contact_box {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+
+.contact_container .contact_info .contact_box .icon {
+  min-width: 60px;
+  height: 60px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+}
+
+.contact_container .contact_info .contact_box .text {
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  color: white;
+  flex-direction: column;
+  font-weight: 300;
+  font-family: Roboto;
+}
+
+.contact_container .contact_info .contact_box .text h3 {
+  font-weight: 500;
+  color: #00bcd4;
+  font-family: Nunito;
+}
+
+.contactform {
+  width: 40%;
+  padding: 40px;
+  background: white;
+}
+
+.contactform h2 {
+  font-size: 30px;
+  color: #333;
+  font-weight: 500;
+}
+
+.contactform .inputbox {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contactform .inputbox input,
+.contactform .inputbox textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  resize: none;
+}
+
+.contactform .inputbox input[type="submit"] {
+  width: 100px;
+  background: #00bcd4;
+  columns: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+
+@media (max-width: 991px) {
+  .contact {
+    padding: 50px;
+  }
+  .contact_container {
+    flex-direction: column;
+  }
+  .contact_container .contact_info {
+    margin-bottom: 40px;
+  }
+  .contact_container .contact_info,
+  .contactform {
+    width: 100%;
   }
 }
